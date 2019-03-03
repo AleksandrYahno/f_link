@@ -14,14 +14,13 @@
 <body>
 
 <header>
-
     <div class="top-menu">
         <div class="wrapper">
             <div class="phone">
                 <a href="tel:+7771001234"><img src="img/phone.png" alt="phone-icon">Call Us +777 (100) 1234</a>
             </div>
             <div class="welcome">
-                Welcome visitor you can <a href="#">login</a> or <a href="#">create an account</a>.
+                Welcome visitor you can <a href="#" class="popUp">login</a> or <a href="#" class="popUp">create an account</a>.
             </div>
             <div class="choice">
                 <ul class="leng">
@@ -37,8 +36,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="header wrapper">
         <div class="header-left">
             <div class="logo">
@@ -50,23 +47,22 @@
                 </form>
             </div>
         </div>
-
         <div class="header-right">
             <ul class="user-menu">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">My Wishlist</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
             </ul>
             <div class="cart">
                 <a href="#">
-                    cart
+                    <img src="img/cart.png" alt="icon-cart">
+                    Cart
+                    <span>$0.00</span>
                 </a>
             </div>
         </div>
     </div>
-
-
     <div class="main-menu">
         <div class="wrapper">
             <ul class="main-menu-list">
@@ -79,27 +75,50 @@
         </div>
 
     </div>
-
 </header>
 
 <div id="main">
     <div class="wrapper">
-
         <div class="slider">
             <div class="single-item"><a href="#"></a></div>
             <div class="single-item"><a href="#"></a></div>
             <div class="single-item"><a href="#"></a></div>
-            <div class="single-item"><a href="#"></a></div>
-            <div class="single-item"><a href="#"></a></div>
         </div>
-
-
-        <div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+        <div class="banners">
+            <div class="banner-item">
+                <img src="img/01.png" alt="icon">
+                <div class="banner-item-descript">
+                    <h5>Best price  </h5>
+                    <span>this week</span>
+                </div>
+            </div>
+            <div class="banner-item">
+                <img src="img/02.png" alt="icon">
+                <div class="banner-item-descript">
+                    <h5>New smells</h5>
+                    <span>in the next series</span>
+                </div>
+            </div>
+            <div class="banner-item">
+                <img src="img/03.png" alt="icon">
+                <div class="banner-item-descript">
+                    <h5>Only natural</h5>
+                    <span>air fresheners</span>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+<div id="popUp_box" class="popUp-form">
+    <form action="">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+        <button id="popUpClose">close</button>
+    </form>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

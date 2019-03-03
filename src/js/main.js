@@ -8,6 +8,8 @@ $(document).ready(function ($) {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        prevArrow: '<button id="prev" type="button" class="btn btn-juliet"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
+        nextArrow: '<button id="next" type="button" class="btn btn-juliet"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>'
     });
 
 
@@ -33,6 +35,13 @@ $(document).ready(function ($) {
             a[i].setAttribute("class", "");
         }
         $(this).addClass("active-btn");
+    });
+
+    $(".popUp").click(function () {
+        $("#popUp_box").addClass("popUp-form-active");
+    });
+    $("#popUpClose").click(function () {
+        $("#popUp_box").removeClass("popUp-form-active");
     });
 
 

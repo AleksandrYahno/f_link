@@ -52,7 +52,6 @@ html
 body
     width: 100%
     height: 100vh
-    overflow: hidden
     position: relative
     background: $colorWhite
     font-family: $fontBitter
@@ -75,9 +74,9 @@ header
 
     width: 100%
     border-top: 2px solid $colorBlue
+    margin-bottom: 20px
     .wrapper
         display: flex
-
     .top-menu
         background: $colorGray
         height: 36px
@@ -139,9 +138,7 @@ header
             .currency
                 margin-left: 24px
 
-
     .header
-        //border: 1px solid gray
         display: flex
         align-items: center
         justify-content: space-between
@@ -191,9 +188,7 @@ header
                         padding: 0 10px
                         position: relative
 
-
         .header-right
-            border: 1px dotted gray
             display: flex
             align-items: center
             width: 48%
@@ -202,11 +197,35 @@ header
             .user-menu
                 display: flex
                 align-items: center
-                border: 1px solid hotpink
+                li
+                    a
+                        font-family: $fontSans
+                        color: #777777
+                        font-size: 12px
+                        text-decoration: none
+                        border-right: 1px solid #E0E0E0
+                        padding: 0 14px
+                li:last-child
+                    a
+                        border: none
             .cart
                 display: flex
-                border: 1px solid navy
-
+                a
+                    text-decoration: none
+                    font-family: $fontSans
+                    color: #777777
+                    font-size: 12px
+                    padding: 0 10px
+                    background: $colorGray
+                    height: 36px
+                    display: flex
+                    align-items: center
+                    border: 1px solid $colorGray
+                    border-radius: 2px
+                    img
+                        margin-right: 8px
+                    span
+                        margin-left: 4px
 
     .main-menu
         border-top: 1px solid #E0E0E0
@@ -246,12 +265,10 @@ header
                 .active-btn:after
                     height: 0
 
-
 .wrapper
     width: 100%
     max-width: 984px
     margin:  0 auto
-    //border: 1px dotted darkslategrey
 
 
 .active-btn
@@ -273,7 +290,6 @@ div#main
     width: 100%
     height: 100%
     background: $colorWhite
-
     .slider
         .single-item
             height: 480px
@@ -287,4 +303,94 @@ div#main
                 background-repeat: no-repeat
                 background-position: center center
 
+        .slick-arrow
+            position: absolute
+            top: 50%
+            z-index: 2
+            width: 42px
+            height: 42px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: none
+            background: rgba( 250, 250, 250, .85)
+            i:before
+                color: $colorDarkGray
+        .slick-prev,
+        #prev
+            left: 0
+        .slick-next,
+        #next
+            right: 0
 
+        .slick-dots
+            position: absolute
+            bottom: 20px
+            right: 20px
+            display: flex
+            li
+                width: 10px
+                height: 10px
+                background: $colorDarkGray
+                border-radius: 50%
+                border: 5px solid $colorGray
+                margin: 0 5px
+                opacity: 0.75
+                button
+                    display: none
+            .slick-active
+                border: 5px solid $colorDarkGray
+                background: $colorGray
+
+    .banners
+        margin: 24px auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .banner-item
+            border: 1px solid #E0E0E0
+            border-radius: 2px
+            width: 310px
+            height: 100px
+            display: flex
+            align-items: center
+            justify-content: space-evenly
+            .banner-item-descript
+                display: flex
+                flex-direction: column
+                color: $colorDarkGray
+
+                h5
+                    width: 100%
+                    font-weight: 400
+                    font-size: 24px
+                span
+
+                    font-size: 16px
+                    font-weight: 100
+                    width: 100%
+                    line-height: 2
+                    color: #939393
+
+
+.popUp-form
+    display: none
+    position: fixed
+    top: calc(50% - 100px)
+    left: calc(50% - 150px)
+    background: #E0E0E0
+    form
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+
+.popUp-form-active
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 300px
+    height: 200px

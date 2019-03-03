@@ -162,7 +162,6 @@ header {
       header .top-menu .choice .currency {
         margin-left: 24px; }
   header .header {
-    border: 1px solid green;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -174,9 +173,11 @@ header {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    height: 36px;
+    max-height: 36px;
+    margin: 50px auto 76px auto; }
     header .header .header-left {
-      border: 1px dotted gray;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -184,11 +185,61 @@ header {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 48%;
+      height: 100%;
+      position: relative; }
       header .header .header-left .logo {
-        border: 1px dashed red; }
+        width: 126px;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        header .header .header-left .logo a img {
+          width: 100%;
+          height: auto; }
       header .header .header-left .search {
-        border: 1px dotted yellow; }
+        height: 100%; }
+        header .header .header-left .search form {
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          header .header .header-left .search form:after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: url("../img/search.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+                    background-size: cover;
+            position: absolute;
+            right: 10px;
+            z-index: 99; }
+          header .header .header-left .search form input {
+            width: 220px;
+            min-height: 35px;
+            border: 1px solid #CCCCCC;
+            -webkit-border-radius: 3px;
+                    border-radius: 3px;
+            padding: 0 10px;
+            position: relative; }
     header .header .header-right {
       border: 1px dotted gray;
       display: -webkit-box;
@@ -198,7 +249,13 @@ header {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      width: 48%;
+      height: 100%;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
       header .header .header-right .user-menu {
         display: -webkit-box;
         display: -webkit-flex;
@@ -216,16 +273,8 @@ header {
         display: flex;
         border: 1px solid navy; }
   header .main-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    header .main-menu .main-menu-list {
-      border: 1px dotted crimson;
+    border-top: 1px solid #E0E0E0; }
+    header .main-menu .wrapper {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -233,7 +282,65 @@ header {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      height: 50px;
+      background: #F5F7F9; }
+    header .main-menu .main-menu-list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      header .main-menu .main-menu-list li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 100%; }
+        header .main-menu .main-menu-list li a {
+          height: 100%;
+          text-decoration: none;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          font-size: 14px;
+          font-weight: 500;
+          color: #444444;
+          text-transform: uppercase;
+          padding: 0 20px;
+          letter-spacing: 1.5px;
+          border: 1px solid #F5F7F9;
+          border-top: none;
+          border-bottom: none; }
+        header .main-menu .main-menu-list li .active-btn {
+          border: 1px solid #72B7BE; }
+        header .main-menu .main-menu-list li .active-btn:after {
+          height: 0; }
 
 .wrapper {
   width: 100%;
@@ -258,3 +365,18 @@ div#main {
   width: 100%;
   height: 100%;
   background: #FFFFFF; }
+  div#main .slider .single-item {
+    height: 480px;
+    position: relative; }
+    div#main .slider .single-item a {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      background: url("../img/item.png");
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }

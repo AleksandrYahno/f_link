@@ -1,39 +1,28 @@
 'use strict';
 
-console.log('check');
-
 $(document).ready(function ($) {
 
-    console.log(777);
 
     $('.single-item').slick({
         dots: true,
-        // infinite: false,
     });
 
-    // $(function () {
-    //     $("#tabs").tabs();
-    // });
-    //
-    // $("#topNavigation li a").click(function () {
-    //     var e = $(this).parent().parent().find("a");
-    //     for (var i = 0; i < e.length; i++) {
-    //         e[i].setAttribute("class", " ");
-    //     }
-    //     $(this).addClass("active-navigation");
-    // });
-    //
-    // $("#bottomNavigation li a").click(function () {
-    //     var e = $(this).parent().parent().find("a");
-    //     for (var i = 0; i < e.length; i++) {
-    //         e[i].setAttribute("class", " ");
-    //     }
-    //     $(this).addClass("active-navigation");
-    // });
-    //
-    // $( ".accordion" ).accordion({
-    //     active: false,
-    //     collapsible: true
-    // });
+
+    $(".leng a").click(function () {
+        var a = $(this).parent().parent().find("a");
+        for(var i = 0; i < a.length; i++) {
+            a[i].setAttribute("class", "");
+        }
+        $(this).addClass("active-btn");
+    });
+
+    $(".currency a").click(function () {
+        var a = $(this).parent().parent().find("a");
+        for(var i = 0; i < a.length; i++) {
+            a[i].setAttribute("class", "");
+        }
+        $(this).addClass("active-btn");
+    });
+
 
 });

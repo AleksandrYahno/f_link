@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Bitter:400,400i,700");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -47,14 +48,119 @@ body {
 
 header {
   width: 100%;
-  background: #F5F7F9; }
+  border-top: 2px solid #7BC4CC; }
+  header:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #ACDCE0;
+    display: block; }
+  header:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #86CDCF;
+    position: absolute;
+    top: 2px; }
   header .wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
   header .top-menu {
-    border: 1px solid red; }
+    background: #F5F7F9;
+    height: 36px;
+    position: relative; }
+    header .top-menu .wrapper {
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    header .top-menu .phone a {
+      color: #444444;
+      font-size: 11px;
+      text-decoration: none;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400; }
+      header .top-menu .phone a img {
+        width: 16px;
+        height: auto;
+        margin-right: 8px; }
+    header .top-menu .welcome {
+      font-size: 12px;
+      color: #444444;
+      font-weight: 400; }
+      header .top-menu .welcome a {
+        color: #7BC4CC;
+        text-decoration: none; }
+    header .top-menu .choice {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 100%; }
+      header .top-menu .choice .leng,
+      header .top-menu .choice .currency {
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        header .top-menu .choice .leng li,
+        header .top-menu .choice .currency li {
+          height: 100%; }
+          header .top-menu .choice .leng li a,
+          header .top-menu .choice .currency li a {
+            height: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            font-family: "Open Sans", sans-serif;
+            text-decoration: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #444444;
+            font-weight: 600;
+            padding: 0 8px;
+            margin: 0 1px;
+            background: #E6E9ED; }
+      header .top-menu .choice .currency {
+        margin-left: 24px; }
   header .header {
     border: 1px solid green;
     display: -webkit-box;
@@ -132,8 +238,21 @@ header {
 .wrapper {
   width: 100%;
   max-width: 984px;
-  margin: 0 auto;
-  border: 1px dotted darkslategrey; }
+  margin: 0 auto; }
+
+.active-btn {
+  color: #FFFFFF !important;
+  background: #7BC4CC !important;
+  position: relative; }
+  .active-btn:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: -6px;
+    background: #7BC4CC;
+    z-index: 1; }
 
 div#main {
   width: 100%;
